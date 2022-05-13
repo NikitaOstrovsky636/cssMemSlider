@@ -1,0 +1,228 @@
+@import "normalize.css";
+
+:root {
+    --bg-color: #25282a;
+    --label-color: #71abff;
+    --white-color: #ffffff;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    max-width: 75em;
+    padding-bottom: 5em;
+    font-family: Roboto;
+}
+
+@media(max-width: 1400px) {
+    body {
+        width: 80%;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--white-color);
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+@media(max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+@media(max-width: 768px) {
+    .slider {
+        flex-direction: column;
+    }
+}
+
+.slider__radio {
+    height: 0;
+    margin: -0.5em 0 -0.5em 0;
+    visibility: hidden;
+}
+
+/* Images */
+.slides-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+}
+
+.slide {
+    width: 25%;
+    transition: all 0.5s ease-in;
+}
+
+.slider__img {
+    width: 100%;
+}
+
+#radio-button1:checked ~ .slides-container .slides .start {
+    margin-left: -0%;
+}
+
+#radio-button2:checked ~ .slides-container .slides .start {
+    margin-left: -25%;
+}
+
+#radio-button3:checked ~ .slides-container .slides .start {
+    margin-left: -50%;
+}
+
+#radio-button4:checked ~ .slides-container .slides .start {
+    margin-left: -75%;
+}
+
+/* Text */
+.text-container {
+    width: 40%;
+    overflow: hidden;
+}
+
+@media(max-width: 768px) {
+    .text-container {
+        width: 100%;
+        order: 3;
+    }
+}
+
+.slider__text {
+    width: 400%;
+    display: flex;
+}
+
+.text {
+    color: var(--white-color);
+    width: 25%;
+    font-size: 2em;
+    transition: all 0.5s ease-in;
+}
+
+@media(max-width: 768px) {
+    .text {
+        font-size: 1.5em;
+    }
+}
+
+#radio-button1:checked ~ .text-container .slider__text .start {
+    margin-left: -0%;
+}
+
+#radio-button2:checked ~ .text-container  .slider__text .start {
+    margin-left: -25%; 
+}
+
+#radio-button3:checked ~ .text-container .slider__text .start {
+    margin-left: -50%;
+}
+
+#radio-button4:checked ~ .text-container .slider__text .start {
+    margin-left: -75%;
+}
+
+/* Regulators */
+.slider__regulators {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1em;
+}
+
+@media(max-width: 768px) {
+    .slider__regulators  {
+        order: 2;
+        justify-content: center;
+        width: 100%;
+        gap: 0.5em;
+    }
+}
+
+.slider__regulator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 4em;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media(max-width: 768px) {
+    .slider__regulator {
+        width: 2em;
+        height: 2em;
+    }
+}
+
+.active {
+    border-radius: 50%;
+    border: 0.5em solid var(--label-color);
+    width: 50%;
+    height: 50%;
+    background-color: var(--label-color);
+    transition: all 0.3s ease;
+}
+
+@media(max-width: 768px) {
+    .active {
+        width: 65%;
+        height: 65%;
+    }
+}
+
+.slider__regulator:hover .active {
+    border: 0.2em solid var(--white-color);
+    background-color: var(--white-color);
+}
+
+.slider__regulator:active {
+    transform: translateY(-30%);
+}
+
+#radio-button1:checked ~ .slider__regulators .slider__regulator1 .active,
+#radio-button2:checked ~ .slider__regulators .slider__regulator2 .active,
+#radio-button3:checked ~ .slider__regulators .slider__regulator3 .active,
+#radio-button4:checked ~ .slider__regulators .slider__regulator4 .active {
+    background-color: var(--bg-color);
+    border: 0.2em solid var(--label-color);
+}
+
+#radio-button1:checked ~ .slider__regulators .slider__regulator1 .active:hover,
+#radio-button2:checked ~ .slider__regulators .slider__regulator2 .active:hover,
+#radio-button3:checked ~ .slider__regulators .slider__regulator3 .active:hover,
+#radio-button4:checked ~ .slider__regulators .slider__regulator4 .active:hover {
+    background-color: var(--bg-color);
+    border: 0.2em solid var(--white-color);
+}

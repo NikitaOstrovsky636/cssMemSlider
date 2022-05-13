@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mem Slider</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">CSS Mem Slider</h1>
+    </header>
+    <main>
+        <div class="slider">
+
+            <input type="radio" name="radio" class="slider__radio" id="radio-button1" checked>
+            <input type="radio" name="radio" class="slider__radio" id="radio-button2">
+            <input type="radio" name="radio" class="slider__radio" id="radio-button3">
+            <input type="radio" name="radio" class="slider__radio" id="radio-button4">
+            <div class="slides-container">
+                <div class="slides">
+                    <div class="slide start"><img class="slider__img" src="./assets/img/img_1.jpg" alt=""></div>
+                    <div class="slide"><img class="slider__img" src="./assets/img/img_2.jpg" alt=""></div>
+                    <div class="slide"><img class="slider__img" src="./assets/img/img_3.jpg" alt=""></div>
+                    <div class="slide"><img class="slider__img" src="./assets/img/img_4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-container">
+                <div class="slider__text">
+                    <div class="text start">The first mem</div>
+                    <div class="text">The second mem</div>
+                    <div class="text">The third mem</div>
+                    <div class="text">Last mem</div>
+                </div>
+            </div>
+            <div class="slider__regulators">
+                <label for="radio-button1" class="slider__regulator slider__regulator1">
+                    <div class="active"></div>
+                </label>
+                <label for="radio-button2" class="slider__regulator slider__regulator2">
+                    <div class="active"></div>
+                </label>
+                <label for="radio-button3" class="slider__regulator slider__regulator3">
+                    <div class="active"></div>
+                </label>
+                <label for="radio-button4" class="slider__regulator slider__regulator4">
+                    <div class="active"></div>
+                </label>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
