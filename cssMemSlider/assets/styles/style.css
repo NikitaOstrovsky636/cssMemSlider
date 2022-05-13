@@ -47,7 +47,6 @@ body {
 }
 
 .slider {
-    position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -63,7 +62,6 @@ body {
 }
 
 .slider__radio {
-    position: absolute;
     visibility: hidden;
 }
 
